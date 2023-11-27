@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Abschlussprojekt</title>
+    
+    <!-- CSS -->    
+    <link rel="stylesheet" href="css/mycss.css">
+
+    <!-- JavaScript -->
+    <script src="js/jquery-3.5.1.js"></script>
+    <script src="js/roofpig_and_three.min.js"></script>
+    
+	</head>
+
+	<body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+
+          <a href="index.html" title="Home"><h2><span class="color-orange">Rubik's</span>&nbsp;Cube</h2></a>
+
+          <nav class="navigation">
+            <ul>             
+              
+              <li class="sub-menu-parent">
+                <a href="wuerfel.html" class="middle">Der Würfel</a>
+                <ul class="sub-menu">
+                   <li><a class="middle" href="wuerfel.html#geschichte">Geschichte</a></li>
+                   <li><a class="middle" href="wuerfel.html#speedsolving">Speedsolving</a></li>
+                   <li><a class="middle" href="wuerfel.html#entwicklung">Entwicklung</a></li>
+                   <li><a class="middle" href="wuerfel.html#arten">Unterarten</a></li>
+                 </ul>
+              </li> 
+              
+              <li class="sub-menu-parent">
+                <a href="loesung.html" class="middle current">Die Lösung</a>
+                <ul class="sub-menu">
+                  <li><a class="middle" href="loesung.html#einleitung">Einleitung</a></li>
+                  <li><a class="middle" href="loesung.html#blume">Gänseblümchen</a></li>
+                  <li><a class="middle" href="loesung.html#weißkreuz">Weißes Kreuz</a></li>
+                  <li><a class="middle" href="loesung.html#erste_ebene">Erste Ebene</a></li>
+                  <li><a class="middle" href="loesung.html#zweite_ebene">Zweite Ebene</a></li>
+                  <li><a class="middle" href="loesung.html#gelbkreuz">Gelbes Kreuz</a></li>
+                  <li><a class="middle" href="loesung.html#kanten">Kanten ausrichten</a></li>
+                  <li><a class="middle" href="loesung.html#ecken">Ecken ausrichten</a></li>
+                  <li><a class="middle" href="loesung.html#finish">Den Würfel lösen</a></li>
+                </ul>
+              </li>
+              
+             <!-- <li class="sub-menu-parent">
+                <a href="#" class="middle">schneller werden</a>
+                <ul class="sub-menu">
+                  <li><a class="middle" href="#">Notation &amp; Algorithmen</a></li>
+                  <li><a class="middle" href="#">CFOP-Methode</a></li>
+                  <li><a class="middle" href="#">Cross</a></li>
+                  <li><a class="middle" href="#">F2L</a></li>
+                  <li><a class="middle" href="#">OLL</a></li>
+                  <li><a class="middle" href="#">PLL</a></li>
+                  <li><a class="middle" href="#">weitere Themen</a></li>
+                </ul>
+              </li>-->
+              
+              <li class="sub-menu-parent">
+                <a href="uebermich.html" class="middle">Über mich</a>
+                <ul class="sub-menu">
+                  <li><a href="uebermich.html#meinestory" class="middle">Story</a></li>                  
+                  <li><a href="uebermich.html#hobby" class="middle">Hobby</a></li>
+                  <li><a href="uebermich.html#sammlung" class="middle">Sammlung</a></li>
+                  <li><a href="uebermich.html#bestzeiten" class="middle">Bestzeiten</a></li>                  
+                </ul>                
+              </li>              
+            </ul>          
+          </nav>                   
+
+        </div>
+      </header>      
+      
+      
+      <section class="main_content">      
+        <h2 class="content_headline left-align">Die Lösung (für Einsteiger):</h2> 
+        
+        <article class="article">
+          <span class="anchor" id="einleitung"></span>
+          <h3>Einleitung</h3>          
+          <p>
+            Die Einsteiger Methode ist sehr leicht anzuwenden (und zu lernen), denn zum lösen des Würfels benötigt man lediglich 6 kurze Algorithmen (Bewegungsabfolgen).<br>
+            Die Lösung selbst erfolgt in 8 Schritten.
+          </p>
+          
+          <!-- Bilder Lösungsreihenfolge -->
+          <div class="reihenfolge">
+            <img src="img/blume.PNG" alt="cube blume">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/good-white-cross.svg" alt="cube weißes kreuz" class="flip">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/erste_ebene.svg" alt="cube erste ebene gelöst" class="flip">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/f2l_solved.svg" alt="cube zwei ebenen gelöst">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/yellow_cross.svg" alt="cube gelbes kreuz">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/yellow_cross_solved_edges.svg" alt="cube gelbes kreuz gelöst">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/yellow_corners_correct_position.svg" alt="cube gelbe ecken positioniert">
+            <img src="img/right-arrow.svg" alt="right arrow" style="width: 3rem">
+            <img src="img/cube_solved.svg" alt="cube gelöst">
+          </div>
+          
+          <div class="panel_inside">
+            <p>Kurze Infos vorab:</p>
+            <ul>
+              <li>Die Mittelsteine sind fest angeordnet und geben die Farbe der Seite vor</li>
+              <li>Folgende Farben liegen sich immer gegenüber:
+                <ul>
+                  <li>Gelb - Weiss</li>
+                  <li>Blau - Grün</li>
+                  <li>Rot - Orange</li>
+                </ul>                
+              </li>
+              
+              <li>Es gibt 8 Ecksteine (mit 3 Farben)</li>
+              <li>und 12 Kanten (mit 2 Farben)</li>
+            </ul>
+            
+            <table class="infos">
+              <tr>
+                <td><img src="img/3X3_opposing_colours.png" alt="feste anordnung"></td>
+                <td><img src="img/3x3_centers_cube.png" alt="mittelsteine"></td>
+                <td><img src="img/3x3_corners_cube.png" alt="ecksteine"></td>
+                <td><img src="img/3x3_edges_cube.png" alt=""></td>
+              </tr>
+              <tr>
+                <td>feste Anordnung</td>
+                <td>Mittelsteine</td>
+                <td>Ecken (3-farbig)</td>
+                <td>Kanten (2-farbig)</td>
+              </tr>
+            </table>
+          </div>
+          
+          <h3>Notation:</h3>
+          <div>
+            <p>Folgende Kurzformen solltet ihr kennen, mit der die Algorithmen beschrieben werden</p>
+            <p>
+              V = Vordere Seite<br>
+              R = Rechte Seite<br>
+              L = Linke Seite <br>              
+              O = Obere Ebene <br>
+            </p>
+            
+            <p>Falls eine 2 hinter einem Buchstaben steht, wird diese Bewegung doppelt ausgeführt</p>
+            <p>
+              Falls ein einzelnes Hochkommata ( ' ) hinter einem Buchstaben steht, bedeutet dass diese Bewegung gegen den Uhrzeigersinn gedreht werden soll.
+            </p>
+            
+            <div class="panel_inside">            
+              <p>Zum Beispiel:</p>
+              <ul>
+                <li><strong>V</strong> = die vordere Seite <strong><span class="clr_white">im</span></strong> Uhrzeigersinn drehen</li>
+                <li><strong>O'</strong> = die obere Ebene <strong><span class="clr_white">gegen</span></strong> den Uhrzeigersinn drehen</li>
+                <li><strong>R2</strong> = die rechte Seite wird <strong><span class="clr_white">doppelt</span></strong> gedreht (also um <strong><span class="clr_white">180°</span></strong>)</li>
+              </ul>
+            </div>
+            
+          </div>
+          
+          <div class="clear"></div>
+          <br>
+        </article>
+        
+        <!-- Gänseblumchen -->
+        <article class="article steps">
+          <span class="anchor" id="blume"></span>
+          <h3>Schritt 1: Gänseblümchen</h3>
+          <img src="img/blume2.PNG" alt="lösung schritt 1">
+          <p>Dieser Schritt kann intuitiv gelöst werden</p>
+          <p>Probiert einfach ein wenig aus.</p>
+          <div class="clear"></div>
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Hilfestellungen: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <h3>1. Hinweis:</h3>
+                <p>Sofern die falsche Seite vom Kantenstein nach oben zeigt, könnt ihr das ganz einfach ändern, indem man diesen zur Seite dreht. Danach macht Ihr in der oberen Ebene platz, damit ihr die Kante dann mit der weißen Seite nach oben drehen könnt.</p> 
+                
+                <div class="roofpig" style="width: 300px; height: 340px; overflow: hidden;" data-config="alg=F U' R |colored=D*/e U|setupmoves=R2 L2 B2 F2 |speed=1000 "></div>
+                         
+              </div>              
+            </div>
+          </div>
+          <br>
+        </article>
+        
+        <!-- weißes Kreuz -->
+        <article class="article steps">
+          <span class="anchor" id="weißkreuz"></span>
+          <h3>Schritt 2: Weißes Kreuz</h3>          
+          <img src="img/good-white-cross.svg" alt="richtiges weißes kreuz" class="flip">    
+          <p>In diesem Schritt dreht Ihr die obere Ebene einfach bis die farbige Seite der Kante zum Mittelstein passt und dreht diese Kante dann um 180° nach unten.</p>
+          <div class="clear"></div>
+          <div class="roofpig" data-config="alg=U F2 B2 U2 R2 L2|colored=D*/e U F R L B|speed=1000"></div>
+          <br>
+        </article>
+        
+        <!-- weiße Ecksteine / erste Ebene lösen -->
+        <article class="article steps">
+          <span class="anchor" id="erste_ebene"></span>
+          <h3>Schritt 3: Die erste Ebene lösen (weiße Ecksteine)</h3>
+          <img src="img/erste_ebene.svg" alt="erste ebene gelöst" class="flip">
+          <p>In diesem Schritt lösen wir die weißen Ecksteine mittels des ersten Algorithmus.</p>
+          <p>Doch bevor wir diesen ausführen müssen wir zuerst die richtigen Bedingungen schaffen</p>
+          <div class="clear"></div>
+          <ul>
+            <li>findet zuerst einen weißen Eckstein in der oberen Ebene (seht in der Hilfe nach, wenn sich keiner dort befindet)</li>
+            <li>schaut welche 2 anderen Farben dieser weiße Eckstein hat</li>
+            <li>dreht die obere Ebene bis der Eckstein sich in der Nähe der 2 passenden Mittelsteine befindet (und somit oberhalb der Ecke in die der Stein eingefügt werden soll</li>
+            <li>haltet den Würfel so, dass der gewählte Eckstein sich rechts-oben auf der Vorderseite befindet</li>
+          </ul>
+          
+          <p>Schaut euch nun den Algorithmus zunächst einmal genau an und achtet darauf, dass die 2 Ecksteine (der Weiß-Rot-Grüne und die markierte Ecke) quasi die Plätze tauschen</p>
+          
+          <div class="roofpig" data-config="alg=R U R' U'|colored=D*  U F R L B|tweaks=X:UFR|speed=1000"></div>
+          
+          <div>
+            <h3>Der "sexy-Move":</h3>
+            <div class="panel_inside">
+              <img src="img/information.svg" alt="information" class="img_info"> Der "sexy-Move" wurde so benannt weil man ihn schnell ausführen kann und wird häufig als Teil von fortgeschrittenen Algorithmen verwendet
+            </div>
+            
+            
+            <p>Dieser Algorithmus besteht aus 4 Bewegungen</p>
+            <ul>
+              <li>Rechte Seite <strong>mit</strong> dem Uhrzeigersinn drehen</li>
+              <li>Obere Seite <strong>mit</strong> dem Uhrzeigersinn drehen</li>
+            </ul>
+            <ul>
+              <li>Rechte Seite <strong>gegen</strong> dem Uhrzeigersinn drehen</li>
+              <li>Obere Seite <strong>gegen</strong> dem Uhrzeigersinn drehen</li>    
+            </ul>
+            
+            <p class="notation"> <img src="img/diary.png" alt="notiz"> Kurzform: <span class="clr_gray">R</span> O - <span class="clr_gray">R'</span> O'</p>
+            
+            
+            <!-- Anleitung der Fingerhaltung -->
+            <div class="card">
+              <button class="accordion">
+                <span class="hilfestellung">
+                  <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                  <span class="accordion_headline">Wie man den sexy-Move ausführt: (hier klicken)</span>
+                </span>              
+              </button>
+
+              <div class="panel">
+                <div class="panel_content">
+                  
+                  <div class="panel_inside">
+                    <img src="img/left_hand_small.png" alt="linke hand" class="left-align">
+                    <p>Mit der linken Hand haltet ihr den Würfel folgendermaßen:</p>
+                    <ul>
+                      <li>Der <strong>Daumen</strong> liegt auf der <strong>Vorderseite</strong> zwischen der ersten und zweiten Ebene</li>
+                      <li><strong>Mittel- und Ringfinger</strong> halten auf der <strong>Rückseite</strong> die erste und zweite Ebene fest</li>
+                    </ul>
+                    <p>So können sich nur die obere und rechte Seite bewegt werden</p>
+                  </div>
+                  <div class="clear"></div>
+                  
+                  <div class="panel_inside">
+                    <img src="img/right_hand_small.png" alt="rechte hand">
+                    <p>Mit der rechten Hand greift ihr vor dem Ausführen um</p>
+                    <ul>
+                      <li>Der <strong>Daumen</strong> liegt auf der <strong>unteren Seite</strong></li>
+                      <li><strong>Zeige-, Mittel- und Ringfinger</strong> liegen auf der <strong>oberen Seite</strong></li>
+                    </ul>
+                    <p>Ungefähr so als würdet ihr einen Burger in der Hand halten.</p>
+                  </div>
+                  
+                  <div class="clear"></div>
+                  <div>
+                    <p>Die ersten 3 Bewegungen macht ihr mit Rechts</p>
+                    <ul>
+                      <li>(<strong>rechte Hand</strong>) Dreht die 3 oberen Finger von euch weg, so dass der Daumen wieder vorne ist</li>
+                      <li>(<strong>rechter Zeigefinger</strong>) Zieht den Zeigefinger zu euch hin.</li>                      
+                      <li>(<strong>rechte Hand</strong>) Rechte Seite <strong>zurück</strong> drehen (der Daumen ist dann wieder unten)</li>
+                    </ul>
+                    <p></p>
+                    <ul>
+                      <li>(<strong>linker Zeigefinger</strong>)Zieht den Zeigefinger zu Euch hin.</li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+
+                </div>              
+              </div>
+            </div>
+          </div>
+          
+          <p>
+            <img src="img/warning.svg" alt="warning" class="img_info"> Manchmal reicht es leider nicht den "sexy-Move" nur einmal auszuführen. Wiederholt dann einfach den ganzen Algorithmus solange, bis die weiße Seite nach unten zeigt.
+          </p>
+          
+          
+          <p>Im schlimmsten Fall müsst Ihr den Algorithmus <strong>bis zu 5 mal</strong> für eine Ecke ausführen.</p> 
+                
+          <div class="roofpig" data-config="alg=R U R' U' R U R' U' R U R' U' R U R' U' R U R' U'|colored=D*  U F R L B|tweaks=X:UFR|speed=1000"></div>
+          
+          <div class="clear"></div>
+          
+          <!-- Hilfestellung -->
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Hilfestellungen: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <h3>1. Hinweis:</h3>
+                <p>Falls sich kein weißer Eckstein in der oberen Ebene befindet, führt Ihr den Algorithmus einfach einmal dort aus, wo ihr den Eckstein entfernen wollt. Danach könnt ihr ihn über die richtige Position drehen.</p>
+                <hr>
+                <h3>2. Hinweis:</h3>
+                <p>Eventuell vergisst man mal wo man sich im Algorithmus befindet. Es braucht ein wenig Übung bis das ganze wie von selbst in euer Muskelgedächtnis übergeht. Im Notfall stellt ihr einfach als erstes sicher, dass Ihr das <strong>weiße Kreuz</strong> wieder herstellt. Und stellt dann die Startbedingungen für den Algorithmus wieder her (also die richtige weiße Ecke über die Position drehen in der sie eingefügt werden soll.</p>
+                      
+              </div>              
+            </div>
+          </div>
+          
+          <br>
+        </article>
+        
+        <!-- mittlere Kanten / zweite Ebene lösen -->
+        <article class="article steps">
+          <span class="anchor" id="zweite_ebene"></span>
+            <h3>Schritt 4: Die zweite Ebene lösen (mittlere Kantensteine)</h3>
+
+            <div>
+              <img src="img/f2l_solved.svg" alt="zweite ebene gelöst">
+
+              <p>In diesem Schritt platzieren wir die richtigen Kantensteine.</p>
+              <p>Dazu benötigt man 2 Algorithmen, die sich allerdings spiegeln.</p>
+              <p>Sorgen wir aber zuerst für die richtigen Startbedingungen</p>
+            </div>            
+          <div class="clear"></div>
+          
+          <div>
+            <ul>
+              <li>Findet in der oberen Ebene einen der 2-farbigen Kantensteine (der nicht gelb ist). Zum Beispiel: Grün-Rot
+                <ul>
+                  <li>Falls ihr dort keinen finden könnt, schaut in der Hilfestellung nach</li>
+                </ul>                
+              </li>
+              
+              <li>Dreht diesen Stein nun bis die Außenseite zum Mittelstein passt (und ein umgedrehtes T entsteht).</li>
+            </ul>
+            <img src="img/align_green_edge.png" alt="grüne seite">
+            <img src="img/align_red_edge.png" alt="rote seite">
+            
+            <div class="clear"></div>
+            
+            <p>Jetzt müssen wir schauen ob wir den Stein Links oder Rechts einfügen müssen</p>
+            
+            <div>
+              <table>
+                <tr>
+                  <td>
+                    <div class="roofpig" data-config="alg=U' L' U L U F U' F'|colored=D* F R L B D FL |tweaks=X:DFL X:FL|hover=1|speed=1000|colors=F:o U:y R:b B:r L:g D:w"></div>
+                  </td>
+                  <td>
+                    <div class="roofpig" data-config="alg=U R U' R' U' F' U F|colored=D* F R L B D FR |tweaks=X:DFR X:FR|hover=1|speed=1000|colors=F:o U:y R:b B:r L:g D:w"></div>
+                  </td>
+                </tr>
+                <tr>
+                  <td><img src="img/Left_alg.png" alt="linker algorithmus"></td>
+                  <td><img src="img/right_alg.png" alt="rechter algorithmus"></td>
+                </tr>
+                <tr>
+                  <td>
+                    <p class="notation"> <img src="img/diary.png" alt="notiz"> (<span class="clr_gray">O'</span> L' <span class="clr_gray">O</span> L) (<span class="clr_gray">O</span> V <span class="clr_gray">O'</span> V')</p>
+                  </td>
+                  <td>
+                    <p class="notation"> <img src="img/diary.png" alt="notiz"> (<span class="clr_gray">O</span> R <span class="clr_gray">O'</span> R') (<span class="clr_gray">O'</span> V' <span class="clr_gray">O</span> V)</p>
+                  </td>
+                </tr>
+              </table>              
+            </div>
+            
+            
+            <div>
+              <p>Das Prinzip ist bei beiden Algorithmen das gleiche.</p>
+              <p>Um es uns leichter zu machen die Abfolge zu merken, teilen wir das ganze in Zwei Parts auf</p>
+
+              <p>1. <strong>Block bilden</strong>  (die zwei Steine richtig zusammenführen)</p>
+              <ul>
+                <li>Zuerst drehen wir die Kante weg (von der Position in die sie eingefügt werden soll) </li>
+                <li>Wir holen die passende weiße Ecke nach oben</li>
+                <li>Jetzt holen wir die Kante zurück zum Mittelstein</li>
+                <li>Nun drehen wir die Linke Seite zurück, so dass die beiden Steine einen kleinen Block bilden</li>
+              </ul>
+
+              <p>2. <strong>Block einfügen</strong></p>
+              <ul>
+                <li>Wir drehen den Block über die Ecke hinaus (so dass man die Vorderseite drehen kann ohne diesen Block wieder zu trennen)</li>
+                <li>Dann dreht man die Vorderseite so, dass die zwei Steine die man jetzt ersetzen möchte in der oberen Ebene sind</li>
+                <li>Danach ersetzt man die zwei Steine die gerade noch oben geholt wurden, durch den Block</li>
+                <li>Zum Schluss dreht man die Vorderseite zurück, damit die weiße Seite wieder vollständig ist</li>
+              </ul>
+            </div>
+            <div class="clear"></div>            
+          </div>
+          
+          <!-- Hilfestellung -->
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Hilfestellungen: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <h3>1. Hinweis:</h3>
+                <img src="img/f2l_flipped_edge.svg" alt="verkehrte ecke">
+                <p>Es kann vorkommen, dass eine Kante verkehrt herum in der Position ist. </p>
+                <br>
+                <p>In diesem Fall müsst ihr den Algorithmus zwei mal ausführen.</p><br>
+                <p>Einmal um einen beliebigen gelben Kantenstein, in dieser Position einzufügen.</p><br>
+                <p>Dann richtet ihr die Kante, die soeben in die obere Ebene geholt wurde, neu aus und fügt sie mit dem richtigen Algorithmus wieder ein.</p>
+                
+              </div>              
+            </div>
+          </div>
+          
+          <div class="clear"></div>
+          <br>
+        </article>
+        
+        <!-- gelbes Kreuz -->
+        <article class="article steps">
+          <span class="anchor" id="gelbkreuz"></span>
+          <h3>Schritt 5: Das gelbe Kreuz</h3> 
+          <img src="img/yellow_cross.svg" alt="gelbes kreuz">
+          <p>Dieser Schritt ist etwas einfacher als der vorherige, denn wir brauchen nur einen kurzen Algorithmus, von dem ihr den größten Teil schon kennt. In Kurzform sieht er so aus:</p>
+          
+          <div class="notation"><img src="img/diary.png" alt="notiz">V (<span class="clr_gray">R</span> O <span class="clr_gray">R'</span> O') V'</div>
+          bzw.
+          <div class="notation"><img src="img/diary.png" alt="notiz">V (<span class="clr_gray">Sexy Move</span>) V'</div>
+          <div class="clear"></div>
+          
+          
+          <div id="cross_cases">            
+            <p>Momentan sollte einer von 4 Fällen vorliegen (die Ecken sind noch nicht relevant):</p>          
+            <img src="img/gelbes_kreuz_reihenfolge.png" alt="Fälle gelbes Kreuz">
+          </div>
+          
+          <div class="clear"></div>
+          
+          <p>Die Vorbereitung für den Algorithmus beschränken sich dieses mal nur auf die 2 mittleren Fälle. Sofern Ihr einen von diesen beiden habt, richtet die obere Ebene so aus wie sie in der Grafik zu sehen sind.</p>
+          
+          <p>Ansonsten wiederholt ihr den Algorithmus einfach solange bis ihr das gelbe Kreuz habt</p>
+          
+          <div class="panel_inside">
+            <ul>
+            <li><strong>Vordere</strong> Seite <strong>mit</strong> dem Uhrzeigersinn drehen</li>
+            <li>Sexy-Move</li>           
+            <li><strong>Vordere</strong> Seite <strong>gegen</strong> dem Uhrzeigersinn drehen</li>
+            <li>(optional): neu ausrichten falls ihr das L oder den Balken habt</li>
+          </ul>
+          </div>
+          
+          <div class="clear"></div>
+          
+          <!-- Hilfestellung Sexy Move -->
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Wie ging der Sexy-Move nochmal?: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <ul>
+                  <li>Rechte Seite <strong>mit</strong> dem Uhrzeigersinn drehen</li>
+                  <li>Obere Seite <strong>mit</strong> dem Uhrzeigersinn drehen</li>
+                </ul>
+                <ul>
+                  <li>Rechte Seite <strong>gegen</strong> dem Uhrzeigersinn drehen</li>
+                  <li>Obere Seite <strong>gegen</strong> dem Uhrzeigersinn drehen</li>    
+                </ul>     
+              </div>              
+            </div>
+          </div>
+          
+          <p>Hier seht ihr den Ablauf der ganzen Phase:</p>
+          <p>Guckt es Euch am besten Schritt für Schritt über das + Zeichen an.</p>
+          <div class="roofpig" data-config="alg=F R U R' U' F' U2 F R U R' U' F'  F R U R' U' F' |colored=U- U UF UL UR UB|speed=1000"></div>
+          
+          
+          <br>
+        </article>
+        
+        <!-- gelbe Kanten ausrichten -->
+        <article class="article steps">
+          <span class="anchor" id="kanten"></span>
+          <h3>Schritt 6: Die gelben Kanten ausrichten</h3> 
+          <img src="img/yellow_cross_solved_edges.svg" alt="gelbes kreuz gelöst">
+          <p>Wir haben nun das gelbe Kreuz auf der oberen Fläche, doch die seitlichen Farben der Kannten stimmen noch nicht mit denen der Seiten überein. Wir müssen diese nun an die richtige Position bringen.</p>
+          
+          <p>Um sie an die richtige Stelle zu bringen benutzen wir einen Algorithmus, der die Vordere-Obere und die Linke-Obere Kante miteinander tauscht.</p>
+          <div class="clear"></div>
+          
+          <div class="center">
+            <p class="notation">
+              <img src="img/diary.png" alt="notiz">
+              <span class="clr_gray">R</span> 
+              O 
+              <span class="clr_gray">R'</span> 
+              O 
+              <span class="clr_gray">R</span> 
+              O2 
+              <span class="clr_gray">R'</span> 
+              O
+            </p>
+            <br>
+            <p>
+              <img src="img/swap_yellow_edges.svg" alt="">
+            </p>            
+          </div>
+          
+          
+          <div class="clear"></div>
+          
+          <div class="roofpig" data-config="alg=R U R' U R U2 R' U|colored=U- U UF UL UR UB|tweaks=X:UF X:UL|speed=1000"></div>
+          
+          <!-- Hilfestellung -->
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Merkhilfen: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <h3>1. Hinweis:</h3>
+                <p>Rechts wird <strong>immer abwechselnd</strong> Hoch oder Runter gedreht</p>
+                <hr>
+                
+                <h3>2. Hinweis:</h3>
+                <p>Oben wird immer <strong>im Uhrzeigersinn</strong> gedreht</p>   
+                <hr>
+                
+                <h3>3. Hinweis:</h3>
+                <p>Beobachtet einmal den markierten Block, der sich wie in einem Karussell in der oberen Ebene bewegt.</p>
+                <p>Dadurch sollte auch klar werden, warum und wann man einmal eine Doppelbewegung machen muss (sonst würden wir mit der nächsten Rechts-Drehung den Block auftrennen)</p>
+                <div class="roofpig" data-config="alg=R U R' U R U2 R' U|colored=U- U UF UL UR UB|tweaks=X:DFR X:FR|speed=1000"></div>                
+                <hr>
+              </div>              
+            </div>
+          </div>
+          
+          <div class="clear"></div>
+          <br>
+          
+        </article>
+        
+        <!-- gelbe Ecken positionieren -->
+        <article class="article steps">
+          <span class="anchor" id="ecken"></span>
+          <h3>Schritt 7: Die gelben Ecken positionieren</h3> 
+          <img src="img/yellow_corners_correct_position.svg" alt="gelbe ecken positionieren">          
+          <p>Wir haben es fast geschafft. Nur noch die gelben Ecken sind übrig, um den Würfel zu lösen. Auch die Ecken lösen wir in zwei Schritten. Zuerst werden wir die Ecken an die richtige Stelle bringen, um sie dann im nächsten Schritt zu orientieren.</p>
+          <p>Dafür brauchen wir einen letzten neuen Algorithmus.</p>
+          <div class="clear"></div>
+          <div class="center">
+            <p class="notation"><img src="img/diary.png" alt="notiz">
+              (<span class="clr_gray">O</span>
+              R)
+              (<span class="clr_gray">O'</span>
+              L')
+              (<span class="clr_gray">O</span>
+              R')
+              (<span class="clr_gray">O'</span>
+              L)
+            </p>
+            <img src="img/cycle-yellow-corners.svg" alt="">
+          </div>
+          
+          <div class="roofpig" data-config="alg=U R U' L' U R' U' L|setupmoves=R' D' R D R' D' R D R' D' R D R' D' R D U R' D' R D R' D' R D U R' D' R D R' D' R D R' D' R D R' D' R D U R' D' R D R' D' R D U|tweaks=X:UFR|speed=1000|hover=1|colors=U:y F:g R:o B:b L:r D:w"></div>
+          
+          <div class="panel_inside">
+            <p>Zur Vorbereitung:</p>
+            <ul>
+              <li>Schaut nach ob Ihr eine Ecke finden könnt, die sich an der richtigen Position befindet (Wo die 3 Farben zu den angrenzenden Mittelsteinen passen. Ob die gelbe Seite schon nach oben zeigt, ist dabei egal)</li>
+              <li>Dreht bei der Suche nur den ganzen Würfel (nicht die obere Ebene) - die gelben Kanten(2-farbig) müssen weiterhin gelöst bleiben</li>
+              <li>Halten den Würfel dann so, dass die richtige gelbe Ecke sich Vorne-Rechts-Oben befindet (bei dem Beispiel ist Grün die Vordere Seite)</li>
+            </ul>
+            <img src="img/warning.svg" alt="warning" class="img_info">
+            <p>Wenn alle 4 Ecken an der falschen Position sind, dann führt Ihr den Algorithmus einfach einmal aus. Danach ist eine Ecke auf jeden Fall richtig.</p>
+            <img src="img/warning.svg" alt="warning" class="img_info">
+            <p>Es kann vorkommen, dass man den Algorithmus 2 Mal wiederholen muss (3 Mal wenn alle Ecken falsch waren)</p>
+          </div>
+          
+          <!-- Hilfestellung -->
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Merkhilfen: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <h3>1. Hinweis:</h3>
+                <p>Bei diesem Algorithmus ist es sehr hilfreich zu betrachten welche Hand aktiv ist.</p>
+                <p>Die Abfolge ist dann wie folgt:</p>
+                <ul>
+                  <li>(Rechte Hand) - 2 Bewegungen</li>
+                  <li>(Linke Hand) - 2 Bewegungen</li>
+                  <li>(Rechte Hand) - 2 Bewegungen</li>
+                  <li>(Linke Hand) - 2 Bewegungen</li>
+                </ul>
+                <hr>
+                
+                <h3>2. Hinweis:</h3>
+                <p>Die zwei Bewegungen haben auch immer Gemeinsamkeiten:</p>
+                <ul>
+                  <li><strong>Zuerst</strong>: Zieht man mit dem jeweiligen <strong>Zeigefinger</strong> die obere Schicht zu sich heran</li>
+                  <li>Danach: folgt eine Drehung</li>                  
+                </ul>  
+                <hr>
+                
+                <h3>3. Hinweis:</h3>
+                <p>Die Drehungen folgen auch einem Muster: </p>
+                <ul>
+                  <li>(Rechte Hand) - Hoch drehen</li>
+                  <li>(Linke Hand) - Hoch drehen</li>
+                  <li>(Rechte Hand) - Runter drehen</li>
+                  <li>(Linke Hand) - Runter drehen</li>
+                </ul> 
+                <hr>
+                
+                <h3>4. Hinweis:</h3>
+                <p>Zusammenfassung</p>
+                <ul>
+                  <li>(<span class="clr_white">Rechte</span> Hand) - Zeigefinger ziehen</li>
+                  <li>(<span class="clr_white">Rechte</span> Hand) - Hoch drehen</li>
+                  <li>(<strong>Linke</strong> Hand) - Zeigefinger ziehen</li>
+                  <li>(<strong>Linke</strong> Hand) - Hoch drehen</li>
+                  <li>(<span class="clr_white">Rechte</span> Hand) - Zeigefinger ziehen</li>
+                  <li>(<span class="clr_white">Rechte</span> Hand) - Runter drehen</li>
+                  <li>(<strong>Linke</strong> Hand) - Zeigefinger ziehen</li>
+                  <li>(<strong>Linke</strong> Hand) - Runter drehen</li>
+                </ul> 
+              </div>              
+            </div>
+          </div>
+          
+          <br>
+        </article>
+        
+        <!-- gelbe Ecken ausrichten / den Würfel lösen -->
+        <article class="article steps">
+          <span class="anchor" id="finish"></span>
+          <h3>Schritt 8: Die gelben Ecken ausrichten / Den Würfel lösen</h3> 
+          <img src="img/cube_solved.svg" alt="würfel gelöst">
+          <p>Im letzten Schritt ist jeder Stein an der Position an der er sein soll, doch die gelben Ecken sind noch falsch orientiert. Um den Würfel zu lösen müssen wir wieder den gleichen Algorithmus benutzen, den wir bereits verwendet haben um die Ecken der ersten Ebene zu lösen: den Sexy-Move</p>
+          <p class="notation"> <img src="img/diary.png" alt="notiz">  <span class="clr_gray">R</span> O - <span class="clr_gray">R'</span> O'</p>
+          <div class="clear"></div>
+          
+          <p>Wir haben jetzt entweder 2, 3 oder 4 Ecken die noch richtig orientiert werden müssen. (habt ihr nur eine falsche Ecke, dann ist diese verdreht und der Würfel unlösbar)</p>
+          
+          <div class="panel_inside">
+            <p>Vorbereitungen:</p>
+            <ul>
+              <li><strong>Drehe</strong> den Würfel zuerst mit der <strong>gelben Seite nach unten</strong></li>
+              <li>Halte den Würfel so, dass eine <strong>ungelöste gelbe Ecke</strong> sich <strong>Vorne-Rechts-Unten</strong> befindet</li>
+            </ul>
+          </div>
+          
+          <p>Der Ablauf erfolgt so:</p>
+          <ul>
+            <li>Ihr wiederholt den "Sexy-Move" bis die gelbe Ecke richtig nach unten zeigt</li>
+            <li>bleibt ruhig, wenn der Würfel jetzt wieder etwas chaotisch aussieht, das ist normal</li>
+            <li>dreht jetzt nur die <strong>untere Ebene</strong> bis die nächste <strong>ungelöste gelbe Ecke</strong> sich <strong>Vorne-Rechts-Unten</strong> befindet</li>
+            <li>Diesen Ablauf wiederholt Ihr bis alle gelben Ecken gelöst sind</li>
+          </ul>
+          <div class="roofpig" data-config="alg=R U R' U' R U R' U' R U R' U' R U R' U' D R U R' U' R U R' U' D R U R' U' R U R' U' R U R' U' R U R' U' D R U R' U' R U R' U' D|colored=*|speed=1000|colors=D:y U:w L:r R:b"></div>
+          
+          <!-- Hilfestellung -->
+          <div class="card">
+            <button class="accordion">
+              <span class="hilfestellung">
+                <img src="img/light-bulb.png" alt="Hilfe Icon Glühbirne">            
+                <span class="accordion_headline">Hinweise: (hier klicken)</span>
+              </span>              
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <h3>1. Hinweis:</h3>
+                <p>Achtet darauf den Sexy-Move immer komplett auszuführen (alle 4 Bewegungen)</p>                
+                <hr>
+                
+                <h3>2. Hinweis:</h3>
+                <p>Eine gelbe Ecke ist nach jeweils 2 oder 4 Ausführungen des Sexy-Moves richtig orientiert.</p>
+                <p>Also schaut am besten alle 2 Sexy-Moves kurz unter den Würfel ob die gelbe Ecke richtig orientiert ist.</p>
+                <p>WICHTIG: Löst dabei am besten <strong>nicht</strong> den Griff der linken Hand, bevor ihr durcheinander kommt, welche Ecke Vorne-Unten-Rechts war</p>
+                  
+                <hr>
+                
+                <h3>3. Hinweis:</h3>
+                <p>Dieser letzte Schritt kann leider sehr frustrierend sein, weil man sich den Würfel wieder vollständig verdrehen kann. Aber gebt nicht auf, falls Ihr nochmal von Vorne beginnen müsst, seht es einfach als Übung für die ersten Schritte an.</p>
+                
+                
+              </div>              
+            </div>
+          </div>
+          
+          <h3>Hoffentlich haltet Ihr nun einen gelösten Rubik's Cube in der Hand.</h3>
+          <br>
+        </article>
+        
+      </section>
+
+      <section id="newsletter">
+        <div class="container">
+          <h1>Abonniert meinen Newsletter</h1>
+          <form action="http://10.10.1.31/formview.php" method="post">
+            <input name="email" type="email" placeholder="E-mail Adresse..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+            <button type="submit" class="btn_subscribe" >abonnieren</button>
+          </form>
+        </div>
+      </section>
+      
+      <footer>
+        <div class="container">          
+          <p>&copy;2021 Steven Mandau</p>
+          <p>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </div>      
+      </footer>
+    </div>
+    
+    <!-- Accordion Script Start -->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+    </script>
+    <!-- Accordion Script Ende -->
+    
+  </body>  
+</html>

@@ -1,0 +1,230 @@
+<!doctype html>
+<html lang="de">
+	<head>
+		<meta charset="utf-8">
+		<title>Abschlussprojekt</title>
+    
+    <!-- CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/flickity-fade@1/flickity-fade.css">
+    <link rel="stylesheet" href="css/mycss.css">
+
+    <!-- JavaScript -->
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script>  
+    <script src="https://unpkg.com/flickity-fade@1/flickity-fade.js"></script>
+	</head>
+
+	<body>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+
+          <a href="index.html" title="Home"><h2><span class="color-orange">Rubik's</span>&nbsp;Cube</h2></a>
+
+          <nav class="navigation">
+            <ul>             
+              
+              <li class="sub-menu-parent">
+                <a href="wuerfel.html" class="middle">Der Würfel</a>
+                <ul class="sub-menu">
+                   <li><a class="middle" href="wuerfel.html#geschichte">Geschichte</a></li>
+                   <li><a class="middle" href="wuerfel.html#speedsolving">Speedsolving</a></li>
+                   <li><a class="middle" href="wuerfel.html#entwicklung">Entwicklung</a></li>
+                   <li><a class="middle" href="wuerfel.html#arten">Unterarten</a></li>
+                 </ul>
+              </li> 
+              
+              <li class="sub-menu-parent">
+                <a href="loesung.html" class="middle">Die Lösung</a>
+                <ul class="sub-menu">
+                  <li><a class="middle" href="loesung.html#einleitung">Einleitung</a></li>
+                  <li><a class="middle" href="loesung.html#blume">Gänseblümchen</a></li>
+                  <li><a class="middle" href="loesung.html#weißkreuz">Weißes Kreuz</a></li>
+                  <li><a class="middle" href="loesung.html#erste_ebene">Erste Ebene</a></li>
+                  <li><a class="middle" href="loesung.html#zweite_ebene">Zweite Ebene</a></li>
+                  <li><a class="middle" href="loesung.html#gelbkreuz">Gelbes Kreuz</a></li>
+                  <li><a class="middle" href="loesung.html#kanten">Kanten ausrichten</a></li>
+                  <li><a class="middle" href="loesung.html#ecken">Ecken ausrichten</a></li>
+                  <li><a class="middle" href="loesung.html#finish">Den Würfel lösen</a></li>
+                </ul>
+              </li>
+              
+             <!-- <li class="sub-menu-parent">
+                <a href="#" class="middle">schneller werden</a>
+                <ul class="sub-menu">
+                  <li><a class="middle" href="#">Notation &amp; Algorithmen</a></li>
+                  <li><a class="middle" href="#">CFOP-Methode</a></li>
+                  <li><a class="middle" href="#">Cross</a></li>
+                  <li><a class="middle" href="#">F2L</a></li>
+                  <li><a class="middle" href="#">OLL</a></li>
+                  <li><a class="middle" href="#">PLL</a></li>
+                  <li><a class="middle" href="#">weitere Themen</a></li>
+                </ul>
+              </li>-->
+              
+              <li class="sub-menu-parent">
+                <a href="uebermich.html" class="middle">Über mich</a>
+                <ul class="sub-menu">
+                  <li><a href="uebermich.html#meinestory" class="middle">Story</a></li>                  
+                  <li><a href="uebermich.html#hobby" class="middle">Hobby</a></li>
+                  <li><a href="uebermich.html#sammlung" class="middle">Sammlung</a></li>
+                  <li><a href="uebermich.html#bestzeiten" class="middle">Bestzeiten</a></li>                  
+                </ul>                
+              </li>              
+            </ul>          
+          </nav>                   
+
+        </div>
+      </header>
+
+      <section class="showcase">
+        <div class="slider-text">
+          <h1>Eine kleine Einführung in die Welt des meistverkauften Spielzeugs</h1>
+        </div>
+        
+        <div class="carousel"
+          data-flickity='{
+             "imagesLoaded": true,
+             "percentPosition": false,
+             "autoPlay": 8000,
+             "fade": true,
+             "draggable": false,
+             "prevNextButtons": false,
+             "pauseAutoPlayOnHover": false}
+             '>
+
+          <img src="img/slider_img_1v2.jpg" alt="Slider Image 1">
+          <img src="img/slider_img_2.jpg" alt="Slider Image 2">
+          <img src="img/slider_img_3.jpg" alt="Slider Image 3">
+          <img src="img/slider_img_4.jpg" alt="Slider Image 4">
+          <img src="img/slider_img_5.jpg" alt="Slider Image 5">         
+          <img src="img/slider_img_7.jpg" alt="Slider Image 6">      
+        </div> 
+        
+      </section>         
+      
+      <section id="newsletter">
+        <div class="container">
+          <h1>Abonniert meinen Newsletter</h1>
+          <form action="http://10.10.1.31/formview.php" method="post">
+            <input name="email" type="email" placeholder="E-mail Adresse..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required/>
+            <button type="submit" class="btn_subscribe" >abonnieren</button>
+          </form>
+        </div>
+      </section>
+      
+      
+      <section class="main_content">
+        <h2 class="content_headline">Übersicht:</h2> 
+        <div class="cards_container">
+                     
+          <!-- Der Würfel START -->
+          <div class="card">
+            <button class="accordion">
+              <img src="img/rubik.png" alt="Bild Würfel">              
+              <span class="accordion_headline">Der Würfel</span>
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <p>Etwas zur Geschichte des Rubiks Cubes, die Anfänge des Speedsolvings und was dies zur Weiterentwicklung und Abwandlungen beigetragen hat. </p>
+                <form>
+                  <button formaction="wuerfel.html" class="btn_readmore">Mehr erfahren</button>     
+                </form>
+                           
+              </div>              
+            </div>
+          </div>
+          <!-- Der Würfel ENDE -->
+          
+          <!-- Die Lösung START -->
+          <div class="card">
+            <button class="accordion">
+              <img src="img/idea.png" alt="Bild Glühbirne">
+              <span class="accordion_headline">Die Lösung</span>
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <p>Aller Anfang ist schwer, doch diese Einsteiger Lösung bringt Euch in 8 einfachen Schritten bei, wie man den Würfel löst.</p>
+                <form>
+                  <button formaction="loesung.html" class="btn_readmore">Los geht's</button>     
+                </form>
+              </div>              
+            </div>
+          </div>
+          <!-- Der Würfel ENDE -->
+          
+          <!-- schneller werden START 
+          <div class="card">
+            <button class="accordion">
+              <img src="img/fast-delivery.png" alt="Bild Stoppuhr">
+              <span class="accordion_headline">schneller werden</span>
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <p>Hier erfahrt Ihr was die nächsten Schritte sind, um den Würfel immer schneller lösen zu können.</p>
+                <form>
+                  <button formaction="fortgeschritten.html" class="btn_readmore">Mehr erfahren</button>     
+                </form>
+              </div>              
+            </div>
+          </div>-->
+          <!-- schneller werden ENDE -->
+          
+          <!-- Über mich START -->
+          <div class="card">
+            <button class="accordion">
+              <img src="img/diary.png" alt="Bild Würfel">
+              <span class="accordion_headline">Über mich</span>
+            </button>
+            
+            <div class="panel">
+              <div class="panel_content">
+                <p>Wie ich zum "Würfeln" gekommen bin, warum es mich immer noch begeistert und weiteres zu meiner Sammlung ...</p>
+                <form>
+                  <button formaction="uebermich.html" class="btn_readmore">Mehr erfahren</button>     
+                </form>
+              </div>              
+            </div>
+          </div>
+          <!-- Über mich ENDE -->
+          
+          
+          
+          
+          
+          
+        </div>
+      </section>
+
+      <footer>
+        <div class="container">          
+          <p>&copy;2021 Steven Mandau</p>
+          <p>Icons made by <a href="https://www.flaticon.com/authors/good-ware" title="Good Ware">Good Ware</a> from <a href="https://www.flaticon.com/" title="Flaticon">www.flaticon.com</a></p>
+        </div>      
+      </footer>
+    </div>
+    
+    <!-- Accordion Script Start -->
+    <script>
+      var acc = document.getElementsByClassName("accordion");
+      var i;
+
+      for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+          this.classList.toggle("active");
+          var panel = this.nextElementSibling;
+          if (panel.style.maxHeight) {
+            panel.style.maxHeight = null;
+          } else {
+            panel.style.maxHeight = panel.scrollHeight + "px";
+          } 
+        });
+      }
+    </script>
+    <!-- Accordion Script Ende -->
+    
+  </body>  
+</html>
