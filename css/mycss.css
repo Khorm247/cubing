@@ -425,7 +425,7 @@ INDEX-CONTENT-CARDS ##########################
 .cards_container .card {
   position: relative;
   cursor: pointer;
-  width: 75%;  
+  width: 30%;  
   box-shadow: 0 1.25rem 1.25rem rgba(0, 0, 0, 0.8);
   margin: 1rem;
 }
